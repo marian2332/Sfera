@@ -26,7 +26,8 @@ namespace SubiektGT_Sfera
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 try
                 {
-                    InsERT.GT gt = new InsERT.GT();
+                    InsERT.Subiekt subiekt;
+                    InsERT.GT gt = new InsERT.GT();                    
                     gt.Produkt = InsERT.ProduktEnum.gtaProduktSubiekt;
                     gt.Serwer = "ITPB\\INSERTGT";
                     gt.Baza = "Projekt1";
@@ -36,11 +37,25 @@ namespace SubiektGT_Sfera
                     gt.Operator = "Szef";
                     gt.OperatorHaslo = "";
 
-                    InsERT.Subiekt subiekt = (InsERT.Subiekt)gt.Uruchom((Int32)InsERT.UruchomDopasujEnum.gtaUruchomDopasuj, (Int32)InsERT.UruchomEnum.gtaUruchomNieArchiwizujPrzyZamykaniu);
-
-
+                    subiekt = (InsERT.Subiekt)gt.Uruchom((Int32)InsERT.UruchomDopasujEnum.gtaUruchomDopasuj, (Int32)InsERT.UruchomEnum.gtaUruchomNieArchiwizujPrzyZamykaniu);
 
                     subiekt.Okno.Widoczne = true;
+
+                    InsERT.Kontrahent kh;
+
+
+                    for (int i=1;i<10;i++)
+                    {
+                        kh = subiekt.Kontrahenci.Dodaj(0);
+                        kh.Symbol = "Test" + i;
+                        kh.Nazwa = "Nazwa" + i;
+                        kh.Ulica = "Ulica" + i;
+                        kh.Miejscowosc = "Miejscowosc" + i;
+                        kh.KodPocztowy = "62-06" + i;
+                        kh.WWW = "www.wp.d" + i;
+                        kh.Zapisz();
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
