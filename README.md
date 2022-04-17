@@ -1,1 +1,2 @@
-# SubiektGT-Sfera
+# Sfera
+### Połączenie z Subiektem
