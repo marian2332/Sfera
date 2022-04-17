@@ -13,8 +13,7 @@ namespace SubiektGT_Sfera
     {
         [STAThread]
         public static void Main(string[] args)
-        {
-            
+        {            
             CreateHostBuilder(args).Build().Run();
         }
 

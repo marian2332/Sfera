@@ -5,8 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ADODB;
-using System.Data.SqlClient;
+
 
 
 namespace SubiektGT_Sfera
