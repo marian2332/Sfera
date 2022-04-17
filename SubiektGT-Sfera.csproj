@@ -4,6 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>dotnet-SubiektGT_Sfera-583010AF-1B64-4B4D-8862-0E56886499C3</UserSecretsId>
     <RootNamespace>SubiektGT_Sfera</RootNamespace>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,10 +16,13 @@
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
+      <Private>true</Private>
     </COMReference>
+    
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ADODB" Version="7.10.3077" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
   </ItemGroup>
 </Project>
