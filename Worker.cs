@@ -27,6 +27,7 @@ namespace SubiektGT_Sfera
                 try
                 {
                     InsERT.Subiekt subiekt;
+                    InsERT.Kontrahent kh;
                     InsERT.GT gt = new InsERT.GT();                    
                     gt.Produkt = InsERT.ProduktEnum.gtaProduktSubiekt;
                     gt.Serwer = "ITPB\\INSERTGT";
@@ -41,8 +42,6 @@ namespace SubiektGT_Sfera
 
                     subiekt.Okno.Widoczne = true;
 
-                    InsERT.Kontrahent kh;
-
 
                     for (int i=1;i<10;i++)
                     {
@@ -55,6 +54,8 @@ namespace SubiektGT_Sfera
                         kh.WWW = "www.wp.d" + i;
                         kh.Zapisz();
                     }
+
+                    subiekt.Aplikacja.Zakoncz();
                     
                 }
                 catch (Exception ex)
