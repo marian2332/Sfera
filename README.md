@@ -1,10 +1,10 @@
 # SubiektGT-Sfera
 
-#Przyk≥ady kodu
-Dodawanie kontrahentÛw:
-InsERT.Kontrahent kh;
-
+#Przyk≈Çady kodu
+Dodawanie kontrahent√≥w:
 ```
+
+InsERT.Kontrahent kh;
 	for (int i=1;i<10;i++)
 		{
 			kh = subiekt.Kontrahenci.Dodaj(0);
